@@ -1,1 +1,7 @@
 <h2>All Products</h2>
+
+<ul>
+<% Product.all.each do |product| %>
+  <li><a href><%= product.name %></a></li>
+  <% end %>
+</ul>
