@@ -1,0 +1,7 @@
+<h1>Category Detail Page</h1>
+
+<h2><%= @category.name %></h2>
+
+<% @category.products.each do |prod|%>
+    <%= prod.name %>
+<% end %>

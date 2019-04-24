@@ -1,0 +1,23 @@
+<h1>Create a new Category</h1>
+
+<form method="POST" action="/categories">
+    <label for="name">Category Name</label>
+    <input type="text" name="name">
+
+    <h3>Products in this Category</h3>
+
+
+    <% 1.times do %>
+    <div>
+        <label for="product[][name]">Name</label>
+        <input type="text" name="product[][name]">
+        <label for="product[][description]">Description</label>
+        <input type="text" name="product[][description]">
+        <label for="product[][price]">Price</label>
+        <input type="text" name="product[][price]">
+    </div>
+    <% end %>
+    <input type="submit">
+
+
+</form>

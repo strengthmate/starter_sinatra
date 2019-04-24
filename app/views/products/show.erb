@@ -1,0 +1,13 @@
+<h1>Detail Page for <%= @product.title %></h1>
+
+<h3><%= @product.name %> by <%= @product.category.name %></h3>
+
+<div><%= @product.description %></div>
+
+<form action="/products/<%= @product.id %>" method="POST">
+    <input type="hidden" value="DELETE" name="_method">
+    <input type="submit" value="Delete this product">
+</form>
+
+<a href="/products/<%= @product.id %>/edit">Edit this product</a>
+<a href="/products">Product Index Page</a>
